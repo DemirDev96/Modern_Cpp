@@ -1,12 +1,20 @@
-#include "Car.h"
-#include <iostream>
-
-int main() {
-    Car c;
-    c.refuel(30);
-    c.set_passengers();          // defaults to 4
-    c.accelerate(20);
-    c.brake(5);
-
-    c.print_dashboard(std::cout);
-}
+#pragma once
+struct Car {
+private:
+	float fuel{ 0 };
+	float speed{ 0 };
+	int passengers{ 0 };
+	int arr[5] = { 1,2,3 };
+	char *p{};
+public:
+	Car(
+        
+    );
+	Car(float amount);
+	void FillFuel(float amount);
+	void Accelerate();
+	void Brake();
+	void AddPassengers(int count); 
+	void Dashboard();
+	~Car();
+};
